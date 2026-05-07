@@ -1,0 +1,164 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#000;
+  color:white;
+}
+
+/* Navbar */
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:#111;
+}
+
+.logo{
+  font-size:32px;
+  font-weight:bold;
+  color:red;
+}
+
+.search-box input{
+  padding:10px 15px;
+  width:250px;
+  border:none;
+  border-radius:30px;
+  outline:none;
+  font-size:16px;
+}
+
+/* Hero Section */
+
+.hero{
+  height:400px;
+  background:url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1600&auto=format&fit=crop') center/cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+  position:relative;
+  z-index:1;
+}
+
+.hero h1{
+  font-size:50px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:20px;
+  color:#ddd;
+}
+
+.hero button{
+  padding:12px 25px;
+  background:red;
+  border:none;
+  border-radius:30px;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  background:darkred;
+}
+
+/* Movies Section */
+
+.movies{
+  padding:50px;
+}
+
+.movies h2{
+  margin-bottom:30px;
+  font-size:35px;
+}
+
+.movie-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.movie-card{
+  background:#111;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.movie-card:hover{
+  transform:scale(1.05);
+}
+
+.movie-card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+}
+
+.movie-info{
+  padding:15px;
+}
+
+.movie-info h3{
+  margin-bottom:10px;
+}
+
+.movie-info p{
+  color:#bbb;
+  margin-bottom:15px;
+}
+
+.movie-info button{
+  width:100%;
+  padding:10px;
+  border:none;
+  background:red;
+  color:white;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.movie-info button:hover{
+  background:darkred;
+}
+
+/* Responsive */
+
+@media(max-width:700px){
+
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .hero h1{
+    font-size:35px;
+  }
+
+}
